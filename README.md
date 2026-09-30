@@ -7,10 +7,10 @@ Pero JavaScript tiene otros conceptos relacionados con las condiciones: valores 
 Date de alta en la plataforma exercism y realiza el siguiente [apartado](https://exercism.org/es-ES/tracks/javascript/exercises/amusement-park). 
 Entrega los códigos en un repositorio privado compartido conmigo `lmagarin`.
 
-Introducción
+# Introducción
 A diferencia de muchos otros lenguajes, en JavaScript hay dos entidades distintas que representan la ausencia de un valor (significativo). Existen null y undefined.
 
-Null
+# Null
 El valor primitivo null se usa como un «valor vacío» intencionado para variables de cualquier tipo.
 
 let name = null;
@@ -22,7 +22,8 @@ let name = null;
 
 name === null;
 // => true
-Undefined
+
+# Undefined
 Una variable a la que no se le ha asignado un valor es de tipo undefined.1
 
 Esto significa que, mientras que null representa un valor vacío (pero sigue siendo un valor), undefined representa la ausencia total de un valor. 🤯
@@ -42,7 +43,8 @@ let name;
 
 name === undefined;
 // => true
-Encadenamiento opcional
+
+# Encadenamiento opcional
 Si intentas obtener un valor anidado en un objeto pero la clave padre no existe, JavaScript lanzará un error. Para evitar esto fácilmente, el encadenamiento opcional se añadió a la especificación del lenguaje en 2020. Con el operador de encadenamiento opcional ?. puedes asegurarte de que JavaScript solo intente acceder a la clave anidada si el padre no era null ni undefined. En caso contrario, se devuelve undefined.
 
 const obj = {
@@ -60,7 +62,8 @@ obj.residence.street;
 
 obj.residence?.street;
 // => undefined
-Coalescencia nula
+
+# Coalescencia nula
 Hay situaciones en las que quieres aplicar un valor predeterminado por si una variable es null o undefined (pero solo en ese caso). Para resolver esto, el operador de coalescencia nula ?? se introdujo en 2020. Devuelve el operando de la derecha solo cuando el operando de la izquierda es null o undefined. En caso contrario, se devuelve el operando de la izquierda.
 
 let amount = null;
@@ -72,7 +75,7 @@ amount = amount ?? 1;
 // => 0
 [1] Undefined, MDN. (2021). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined (consultado el 4 de junio de 2021).
 
-Instrucciones
+# Instrucciones
 Tu trabajo consiste en proporcionar y mantener partes del sistema informático de un parque de atracciones. En concreto, eres responsable del programa que gestiona a los visitantes y las entradas.
 
 Primero, crearás un nuevo visitante en el sistema. Después, proporcionarás una función para revocar una entrada. En las tareas 3 y 4, trabajarás en el sistema de seguimiento de entradas que ayuda a evitar la falsificación. Por último, ayudarás a adaptar el sistema a los nuevos requisitos legales.
