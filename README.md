@@ -79,3 +79,13 @@ amount = amount ?? 1;
 Tu trabajo consiste en proporcionar y mantener partes del sistema informático de un parque de atracciones. En concreto, eres responsable del programa que gestiona a los visitantes y las entradas.
 
 Primero, crearás un nuevo visitante en el sistema. Después, proporcionarás una función para revocar una entrada. En las tareas 3 y 4, trabajarás en el sistema de seguimiento de entradas que ayuda a evitar la falsificación. Por último, ayudarás a adaptar el sistema a los nuevos requisitos legales.
+
+# 1. Crea un nuevo visitante
+Cuando los visitantes llegan al parque de atracciones por primera vez, tienen que registrarse introduciendo su nombre y su edad en un terminal y aceptando los términos y condiciones. Por supuesto, también tienen que comprar una entrada. Cada entrada tiene un identificador como H32AZ123.
+
+Escribe una función createVisitor que acepte tres argumentos.
+
+El nombre del visitante.
+La edad del visitante.
+El identificador de la entrada que ha comprado el visitante.
+La función debe devolver un objeto que contenga esta información. Las claves del objeto deben llamarse name, age y ticketId.
