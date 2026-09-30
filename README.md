@@ -1,0 +1,1 @@
+# A2.-Truthy-falsy-null-and-undefined.-Exercism.
