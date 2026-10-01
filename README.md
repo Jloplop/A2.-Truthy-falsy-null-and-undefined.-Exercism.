@@ -89,3 +89,47 @@ El nombre del visitante.
 La edad del visitante.
 El identificador de la entrada que ha comprado el visitante.
 La función debe devolver un objeto que contenga esta información. Las claves del objeto deben llamarse name, age y ticketId.
+
+<img width="455" height="154" alt="image" src="https://github.com/user-attachments/assets/a3bfc163-ee6a-4424-ae4e-94b8fc7f196a" />
+
+
+
+# 2. Revoca la entrada
+Cuando las personas salen del parque de atracciones, su entrada se revoca. Si vuelven, tienen que comprar una nueva. Para ahorrar tiempo a los visitantes habituales, solo tienen que registrarse una vez y la información del visitante se conserva para las visitas posteriores.
+
+Eso significa que, cuando un visitante sale del parque, solo hay que invalidar su entrada, pero el resto del objeto del visitante debe permanecer igual. Implementa la función revokeTicket que acepte un objeto de visitante, establezca el identificador de la entrada a null y devuelva el objeto después.
+
+<img width="338" height="126" alt="image" src="https://github.com/user-attachments/assets/732d4f49-a1e9-4a70-acfc-eb2b7f03e772" />
+
+
+
+# 3. Determina el estado de la entrada
+Para evitar la falsificación, los identificadores de las entradas son únicos. Una vez que se imprime una entrada, su identificador se añade como clave en un objeto del sistema para poder hacerle un seguimiento.
+
+Antes de vender la entrada a un visitante, se almacena con el valor null en el objeto de seguimiento de entradas. Cuando se vende a un visitante, se asigna el nombre del visitante como valor. Cuando los empleados dudan de la validez de una entrada, tienen que consultar el estado de la entrada en el sistema.
+
+Implementa una función ticketStatus que acepte el objeto de seguimiento y un identificador de entrada como argumentos. Debe devolver uno de los siguientes resultados.
+
+'unknown ticket id' si el identificador no se encontró en el objeto de seguimiento
+'not sold' en caso de que la entrada se imprimiera pero no se vendiera
+'sold to {name}' donde {name} es el nombre del visitante si la entrada se vendió
+
+<img width="403" height="211" alt="image" src="https://github.com/user-attachments/assets/ac975470-5ae8-4ddb-b67b-57294057f869" />
+
+
+# 4. Mejora la respuesta del estado de la entrada
+Al cabo de un tiempo, los empleados te comentan que quieren que el estado de la entrada sea más fácil de entender a primera vista. Solo quieren ver el nombre del visitante o que la entrada no es válida.
+
+Escribe una función simpleTicketStatus que acepte los mismos argumentos que ticketStatus en la tarea 3. Esta función solo devuelve uno de dos resultados diferentes.
+
+el nombre del visitante si la entrada se vendió
+'invalid ticket !!!' si la entrada aún no se ha vendido o el identificador no se encontró en el objeto de seguimiento
+
+<img width="535" height="116" alt="image" src="https://github.com/user-attachments/assets/d33587c5-6e76-4dca-b1a7-5f1ebd3058bd" />
+
+# 5. Determina la versión de los términos y condiciones
+Debido a nuevos requisitos legales, los objetos de visitante recién creados ahora también contienen información detallada sobre los «Términos y condiciones generales» (GTC) que el usuario ha aceptado. A continuación puedes ver un ejemplo del nuevo objeto de visitante.
+
+Los cajeros del parque de atracciones ahora tienen que comprobar si un visitante necesita firmar una nueva versión de los GTC. Para ello, implementa una función gtcVersion que acepte un objeto de visitante como argumento y devuelva la versión de los GTC si está disponible. Si la información de la versión no está disponible, no debe devolverse nada.
+
+<img width="502" height="136" alt="image" src="https://github.com/user-attachments/assets/3c63c959-db05-49c8-b87e-da3e0a8860af" />
